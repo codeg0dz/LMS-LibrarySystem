@@ -1,0 +1,430 @@
+/*Universal*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Grid Layout for the overall page */
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, body, footer */
+    grid-template-areas: 
+        "header"
+        "body"
+        "footer";
+    height: 100vh; /* Full viewport height */
+}
+
+/* Header styling */
+.header {
+    grid-area: header;
+    background-color: #00569b;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+.body {
+    background-image: url('../img/library_wallpaper.jpg');
+    grid-area: body;
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    background-color: #f8f8f8;
+    padding: 1rem; /* Padding for responsiveness */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Responsive grid layout for login form */
+.login-form {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default */
+    gap: 1rem; /* Space between items */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Limit width on larger screens */
+    padding: 2rem;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+}
+
+/* Adjustments for form inputs and buttons */
+
+#username, #password{
+    height:  2rem;
+}
+.btn-login {
+    background-color: #00569b;
+    color: white;
+    padding: 0.65rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: #004080;
+}
+
+/* Registration link styling */
+.register-link {
+    font-size: 0.9rem;
+    text-align: center; /* Center the link */
+    color: #00569b;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+.footer {
+    grid-area: footer;
+    background-color: #00569b;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .login-form {
+        padding: 1rem; /* Less padding on smaller screens */
+    }
+}
+
+/*------CREATE ACCOUNT PAGE------*/
+
+/* Registration Container */
+.registration {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Form Elements */
+.registration-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.registration-form input, 
+.registration-form select, 
+.registration-form button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Proof Container */
+.hidden {
+    display: none;
+}
+
+/* Submit Button */
+.btn-primary {
+    background-color: lightgreen;
+    color: white;
+    font-size: 1rem;
+    padding: 0.75rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #004080;
+}
+
+/*---- STUDENT DASHBOARD PAGE----- */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #f9f9f9;
+}
+
+/* Dashboard Container Grid */
+.dashboard-container {
+    display: grid;
+    grid-template-rows: auto auto 1fr; /* Header, Search Box, Table */
+    gap: 1rem;
+    padding: 1rem;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    gap: 30px;
+    
+}
+
+/* Book List Header */
+.book-list-header {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 1rem;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.book_search {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search_books {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn-search {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #00569b;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: #004080;
+}
+
+/* Table Section */
+.table-container {
+    overflow-y: hidden;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table_student {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table_student th, .table_student td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+}
+
+.table_student th {
+    background-color: #00569b;
+    color: white;
+    font-weight: bold;
+}
+
+.table_student td img {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.btn-reserve {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-reserve:hover {
+    background-color: #218838;
+}
+
+/* Logout Button */
+.btn-logout {
+    display: flex;
+    justify-content: flex-end; /* Position at the bottom right */
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn-logout:hover {
+    background-color: #c9302c;
+}
+
+/*-----ADMIN DASHBOARD-----*/
+
+/* Ensure the layout stretches across the full viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Grid container styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Left column (Create Book) and right column (tables) */
+    grid-template-rows: 1fr auto auto; /* Header, content, footer */
+    gap: 20px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: lightgray;
+}
+.admin .section-title {
+    color: #007BFF;
+}
+/* Left section: Create Book */
+.create-book {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+/* Right section (tables): Edit Books and Respond to Requests */
+.right-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Two rows for the tables */
+    gap: 20px;
+    
+}
+
+.edit-books, .respond-requests {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+
+/* Form and button styling */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn_primary {
+    background-color: #4CAF50;
+}
+
+.btn-edit, .btn-delete, .btn-approve, .btn-reject {
+    margin-right: 10px;
+    padding: 8px 15px;
+    
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.btn-edit{
+    background-color: green;
+    color: white;
+}
+.btn-approve{
+    background-color: green;
+    color: white;
+}
+.btn-delete, .btn-reject{
+    background-color: red;
+    color: white;
+}
+.btn-edit:hover, .btn-delete:hover, .btn-approve:hover, .btn-reject:hover {
+    background-color: #ddd;
+}
+
+/* Table styling */
+.admin_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table_head th {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: left;
+}
+
+.admin_table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+hr {
+    margin-top: 20px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+/* Logout */
+.btn-btn-logout {
+    display: flex;
+    justify-content: center; /* Position at the bottom right */
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
